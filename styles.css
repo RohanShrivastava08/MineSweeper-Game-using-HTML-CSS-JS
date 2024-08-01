@@ -1,0 +1,128 @@
+/* General styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, #e0f7fa, #b2dfdb); /* Soft gradient background */
+}
+
+header {
+    background: #004d40;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+#game-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 1em;
+}
+
+#timer, #score {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00796b;
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(10, 50px);
+    grid-template-rows: repeat(10, 50px);
+    gap: 5px;
+    margin: 1em 0;
+}
+
+.cell {
+    width: 50px;
+    height: 50px;
+    background: #e0f2f1;
+    border: 2px solid #b2dfdb;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 24px;
+    color: transparent;
+    transition: background 0.3s, transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cell:hover {
+    background: #b9fbc0;
+}
+
+.cell.revealed {
+    background: #ffffff;
+    color: #000000;
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.cell.mine {
+    background: #ffffff;
+    color: #ff0000;
+}
+
+.cell.flagged {
+    background: #ffeb3b;
+    color: #000000;
+}
+
+#status {
+    text-align: center;
+}
+
+button {
+    background: #004d40;
+    color: #fff;
+    border: none;
+    padding: 0.5em 1.5em;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #00332b;
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+footer {
+    background: #004d40;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+    #game-board {
+        grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+    }
+
+    #game-info {
+        flex-direction: column;
+        align-items: center;
+    }
+}
