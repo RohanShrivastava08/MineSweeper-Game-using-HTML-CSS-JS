@@ -1,5 +1,7 @@
 # 🕹️ Minesweeper Game using HTML, CSS & JavaScript
 
+## Live Link: https://minesweepergamedev.netlify.app/
+
 ![Screenshot (308)](https://github.com/user-attachments/assets/462ffc12-4e2c-4ae6-96ca-c9abfcd9a204)
 
 ![Screenshot (309)](https://github.com/user-attachments/assets/a3e26fc2-2b16-4d21-b6dc-b93f800ea73d)
